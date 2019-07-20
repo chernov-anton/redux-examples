@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const SearchBar = (props) => {
   return (
@@ -6,11 +6,11 @@ const SearchBar = (props) => {
       <input
         type="text"
         placeholder="Search..."
-        value={props.text}
+        value={props.value}
         onChange={props.onChange}
       />
     </form>
-  )
-}
+  );
+};
 
-export default SearchBar
+export default SearchBar;

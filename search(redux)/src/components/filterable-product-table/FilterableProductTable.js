@@ -1,11 +1,11 @@
 import React from 'react';
-import SearchBar from '../search-bar'
-import ProductTable from '../product-table'
+import SearchBar from '../search-bar';
+import ProductTable from '../product-table';
 
-const FilterableProductTable = () =>  (
+const FilterableProductTable = (props) => (
   <div className="m-5">
-    <SearchBar />
-    <ProductTable />
+    <SearchBar text={props.value} onChange={props.onChange}/>
+    <ProductTable products={props.products}/>
   </div>
 );
 

@@ -1,30 +1,6 @@
-import React from "react"
-
-class ProductCategoryRow extends React.Component {
-  render() {
-    const category = this.props.category;
-    return (
-      <tr>
-        <th colSpan="2">
-          {category}
-        </th>
-      </tr>
-    );
-  }
-}
-
-class ProductRow extends React.Component {
-  render() {
-    const product = this.props.product;
-
-    return (
-      <tr>
-        <td>{product.name}</td>
-        <td>{product.price}</td>
-      </tr>
-    );
-  }
-}
+import React from 'react';
+import ProductCategoryRow from './ProductCategoryRow';
+import ProductRow from './ProductRow';
 
 class ProductTable extends React.Component {
   getRows = () => {
@@ -32,10 +8,6 @@ class ProductTable extends React.Component {
     let lastCategory = null;
 
     this.props.products.forEach((product) => {
-      if (!product.name.includes(this.props.searchText)) {
-        return;
-      }
-
       if (product.category !== lastCategory) {
         rows.push(
           <ProductCategoryRow
@@ -51,7 +23,7 @@ class ProductTable extends React.Component {
       lastCategory = product.category;
     });
 
-    return rows
+    return rows;
   };
 
   render() {

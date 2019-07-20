@@ -1,3 +1,5 @@
-import FilterableProductTable from './FilterableProductTable'
+import FilterableProductTableContainer from './FilterableProductTableContainer';
+import reducer from './module';
 
-export default FilterableProductTable;
+export {reducer};
+export default FilterableProductTableContainer;

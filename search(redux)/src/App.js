@@ -1,13 +1,13 @@
-import React from 'react'
-import {createStore} from 'redux'
-import {Provider} from 'react-redux'
-import FilterableProductTable from './components/filterable-product-table'
+import React from 'react';
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+import FilterableProductTable, {reducer} from './components/filterable-product-table';
 
-const store = createStore(() => {})
+const store = createStore(reducer);
 
 const App = () =>
   <Provider store={store}>
     <FilterableProductTable/>
-  </Provider>
+  </Provider>;
 
-export default App
+export default App;
