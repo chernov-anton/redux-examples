@@ -6,7 +6,6 @@ import {
 } from './module';
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
     country: state.data.country,
     city: state.data.city,
