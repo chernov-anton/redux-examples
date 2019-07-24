@@ -13,7 +13,7 @@ export const getCityInfo = () => {
 export const receiveCityInfo = (cityInfo) => {
   return {
     type: CITY_INFO_SUCCESS,
-    cityInfo
+    payload: cityInfo
   };
 };
 
@@ -58,8 +58,8 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         data: {
-          country: action.cityInfo.country_name,
-          city: action.cityInfo.city
+          country: action.payload.country_name,
+          city: action.payload.city
         },
         loading: false
       };
