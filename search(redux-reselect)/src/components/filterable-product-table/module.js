@@ -1,5 +1,3 @@
-import products from '../../data/products';
-
 const INPUT_CHANGED = 'filterable-product-table/INPUT_CHANGED';
 
 export function changeInput(value){
@@ -10,17 +8,14 @@ export function changeInput(value){
 }
 
 const initialState = {
-  value: '',
-  products
+  value: ''
 };
 
 export default function reducer(state = initialState, action){
   switch (action.type){
     case INPUT_CHANGED:
       return {
-        ...state,
-        value: action.value,
-        products: products.filter(product => product.name.includes(action.value))
+        value: action.value
       };
     default:
       return state;

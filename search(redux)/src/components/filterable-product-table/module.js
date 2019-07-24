@@ -10,7 +10,7 @@ export function changeInput(value){
 }
 
 const initialState = {
-  text: '',
+  value: '',
   products
 };
 
